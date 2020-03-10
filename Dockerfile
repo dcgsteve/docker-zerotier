@@ -7,4 +7,6 @@ COPY files/supervisor-zerotier.conf /etc/supervisor/conf.d
 COPY files/start.sh /opt/start.sh
 RUN chmod 755 /opt/start.sh
 
+VOLUME /var/lib/zerotier-one
+
 ENTRYPOINT /opt/start.sh
